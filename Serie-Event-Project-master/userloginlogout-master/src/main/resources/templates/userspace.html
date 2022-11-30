@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/userspace.css}"/>
+</head>
+<body>
+<div class="container">
+<div class="title">Bienvenue [[${#request.userPrincipal.principal.fullName}]]</div>
+    
+<div classe="user-action">
+ 
+  <a  class="details" th:href="@{'/userspace/user/'+${current_user.id}+'/series'}">Liste des séries</a>
+   <form  class="details" th:action="@{/logout}" method="post"><input type="submit" value="Se déconnecter"></form>
+  </div>  
+   
+   
+</div>
+</body>
+
+</html>

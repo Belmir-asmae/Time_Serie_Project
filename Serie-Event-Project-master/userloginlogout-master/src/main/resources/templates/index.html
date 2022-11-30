@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
+    <link link ="reelsheet" type="text/css"  >
+    <link rel="stylesheet" th:href="@{/first_page.css}"/>
+    <title>Home</title>
+</head>
+<body>
+<div class="banner">
+    
+    <div class="navbar">
+        <!--<h3><a th:href="@{/list_users}">List Users</a></h3>-->
+        <ul>
+         <li><a th:href="@{/register}">Inscription</a></li>
+         <li><a th:href="@{/login}">Connexion</a></li>
+        </ul>
+        
+       
+    </div>
+</div>
+</body>
+</html>

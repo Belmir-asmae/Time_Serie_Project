@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Event</title>
+    <link rel="stylesheet" th:href="@{/edit_event.css}"/>
+</head>
+<body>
+<div class="container">
+  <div class="title">Modifier un événement</div>
+  <form th:action="@{${#httpServletRequest.requestURI}+'/save'}" th:object="${event}" method="post">
+    <input type="hidden" th:field="*{id}" th:value="${event.id}" />
+    
+   <div class="event-details">
+      <div class="input-box">
+        <label class="col-form-label col-sm-4">Date de l'événement  </label>
+          <input type="text" th:field="*{date}" class="form-control" required/>
+      </div>
+      <div class="input-box">
+        <label class="col-form-label col-sm-4"> Valeur  </label>
+          <input type="text" th:field="*{valeur}" class="form-control" required/>
+      </div>
+      <div class="input-box">
+        <label class="col-form-label col-sm-4"> Commentaire  </label>
+          <input type="text" th:field="*{commentaire}" class="form-control" required/>
+      </div>
+      <div class="input-box">
+       <!--<label class="col-form-label col-sm-4">Ajouter un tag </label>
+        <select  name="tag" class="drop-down-item">
+          <option th:each="tags : ${ListTags}" th:value="${tags.id}" th:text = "${tags.name}" th:field="*{tag_string}">
+          </option>
+        </select>
+        -->
+       <label class="col-form-label col-sm-4">Tag à modifier : </label>
+       <input type="text" th:value="${event.tag_string}" th:field="*{tag_string}" />
+      </div>
+
+        <div class="button">
+          <button type="submit">Enregistrer</button>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>

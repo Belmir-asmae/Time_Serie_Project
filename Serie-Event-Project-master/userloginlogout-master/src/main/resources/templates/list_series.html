@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listes Series</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/list_series.css}"/>
+</head>
+<body>
+<div class="container">
+     <div class="title">Liste des séries</div>
+            <a class="new-serie" th:href="@{${#httpServletRequest.requestURI}+'/new'}">Créer une Série</a>
+             </div>
+        <table class="content-table">
+            <thead class="thead-dark">
+            <th>Titre</th>
+            <th>Déscription</th>
+            <th>Actions</th>
+            </thead>
+            <tbody>
+            <th:block th:each="serie : ${listofseriesbyId}">
+                <tr>
+                    <td>[[${serie.titre}]]</td>
+                    <td>[[${serie.description}]]</td>
+                    <td>
+                        <a th:href="@{${#httpServletRequest.requestURI}+'/edit/'+${serie.id}}">Modifier</a>
+                        <a th:href="@{'/series/delete/'+${serie.id}}">Supprimer</a>
+                        <a th:href="@{${#httpServletRequest.requestURI}+'/'+${serie.id}}">Inspecter</a>
+                     
+                    </td>
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

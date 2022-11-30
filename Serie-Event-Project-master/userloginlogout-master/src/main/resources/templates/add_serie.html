@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Create a new Product</title>
+  <link rel="stylesheet" th:href="@{/add_serie.css}"/>
+</head>
+<body>
+<div class="container">
+  <div class="title">Créer une série</div>
+  <form th:action="@{${#httpServletRequest.requestURI}+'/save'}" th:object="${serie}" method="post">
+    <input type="hidden" th:field="*{id}" th:value="${serie.id}" />
+    <div class="list-details">
+      <div class="input-box">
+        <label class="col-form-label col-sm-4">Title de série </label>
+        <input type="text" th:field="*{titre}" class="form-control" required/>
+      </div>
+      
+      <div class="input-box">
+        <label class="col-form-label col-sm-4">Déscription de la série </label>
+        <input type="text" th:field="*{description}" class="form-control" required/>
+       </div>
+
+      <div class="button">
+         <button type="submit">Enregistrer</button>
+       </div>
+      </div>
+  </form>
+</div>
+   <!--
+      <div class="=col-sm-8" style="display: none;">
+        <select th:field="*{Events}" class="form-control" required>
+          <th:block th:each="event : ${listEvent}">
+            <option th:text="${event.date}" th:value="${event.id}"></option>
+          </th:block>
+        </select>
+      </div>
+      -->
+</body>
+</html>

@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+body{
+height: 100vh;
+ background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.new-serie{
+    color: #2c073f;
+    text-align: center;
+ background-color: #c8e7e6;
+ box-shadow: rgb(38, 67, 27) 0px 18px 30px -10px;
+ text-decoration : none;
+ padding-top : 10px;
+ width : 450px;
+ margin-left : 500px;
+ border-radius: 20px;
+ height : 100px;
+}
+.new-serie:hover {
+text-decoration : none;
+color : black;
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+margin-bottom: 25px;
+margin-top : 20px;
+}
+
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    width: 1000px;
+    margin-left: 230px;
+    margin-top: 50px;
+    height: 300px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+}
+
+.content-table thead tr {
+        background-color: #243b54;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+        width: 10px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #2e00ff08;
+}
+
+.content-table tbody tr:last-of-type {
+       border-bottom: 2px solid #1d0345;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+
+}
+.content-table td a {
+  background-color: #243b54;
+  height : 50px;
+   border-radius: 20px;
+       text-decoration: none;
+
+}
+
+td,
+th{
+    padding: 10px;
+
+}
+ a:hover {
+ background : color;
+}
+a {
+    color: white;
+    text-decoration: none;
+    padding:5px;
+    background-color: transparent;
+    margin-right : 25px;
+}
